@@ -9,7 +9,7 @@ var textSpace = document.getElementById('typeSpace');
 var printSpace = document.getElementById('printSpace');
 var fonts = ["AnonymousPro", "Courier", "CutiveMono", "DroidSansMono"];
 var fontSizes = ["8px", "9px", "10px", "11px", "12px", "13px", "14px","15px",
-                 "16px"];
+                 "16px","17px","18px"];
 var themes = ["None", "GitHub", "VS", "XCode"];
 var currentTheme = "None";
 var stylesheetCount = 4;
@@ -59,6 +59,25 @@ function changeFont(font)
     }
     // Highlight the desired item
     document.getElementById(font.replace(/ /g, "")).className="selected";
+}
+
+/**
+ * Adds Line numbers to the code
+ */
+function addLineNumbers()
+{
+    var code="";
+    var line=1;
+    var lines = textSpace.value.split('\n');
+    
+    // Traverse the code line by line
+    for(var i = 0;i < lines.length;i++){
+        //using lines[i] which will give each line
+        code+=line+"\t"+lines[i]+"\n"
+        line++;
+    }
+    // Changed the textspace
+    textSpace.value=code;
 }
 
 /**
