@@ -78,6 +78,8 @@
                                 <li id="14px"><a href="javascript:undefined;" onClick="changeSize('14px');">14px</a></li>
                                 <li id="15px"><a href="javascript:undefined;" onClick="changeSize('15px');">15px</a></li>
                                 <li id="16px"><a href="javascript:undefined;" onClick="changeSize('16px');">16px</a></li>
+                                <li id="16px"><a href="javascript:undefined;" onClick="changeSize('17px');">17px</a></li>
+                                <li id="16px"><a href="javascript:undefined;" onClick="changeSize('18px');">18px</a></li>
                             </ul>
                         </li>
                         <!-- Code Highlighting Themes -->
@@ -124,7 +126,13 @@
                     <textarea id="typeSpace" class="typeSpace" placeholder="Paste your code in here!"></textarea>
                 </div>
             </div>
-
+            
+            <div class="alert alert-info alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Alert!</strong> You cannot remove the line numbers if added in this current version
+            </div>
+            
+            <button class="btn btn-default" onclick="addLineNumbers()">Add Line Numbers</button>
             <!-- Used to store the printed code -->
             <div id="printSpace" class="printSpace">Hello, and welcome to CodePrinter!<br />This is where your code will be printed out!</div>
         </div>
@@ -140,6 +148,6 @@
 
         <!-- CodePrinter specific Javascript
         ================================================== -->
-        <script src="assets/js/codeprinter.min.js"></script>
+        <script src="assets/js/codeprinter.js"></script>
     </body>
 </html>
